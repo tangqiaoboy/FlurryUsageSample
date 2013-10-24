@@ -8,22 +8,27 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)firstButtonPressed:(id)sender {
+    [Flurry logEvent:@"First Button Pressed"];
+    [Flurry logEvent:@"Button Pressed"
+      withParameters:@{@"target": @"first"}];
+}
+
+- (IBAction)secondButtonPressed:(id)sender {
+    [Flurry logEvent:@"Second Button Pressed"];
+    [Flurry logEvent:@"Button Pressed"
+      withParameters:@{@"target": @"second"}];
+}
 @end
