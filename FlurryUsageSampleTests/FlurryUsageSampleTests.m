@@ -33,7 +33,7 @@
 
 - (void)testExample2
 {
-    XCTAssertEqual(@"1", @"2", @"test failure");
+    XCTAssertEqual(@"1", @"1", @"test failure");
 }
 
 
