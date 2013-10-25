@@ -28,7 +28,13 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssertEqual(@"1", @"1", @"test pass");
 }
+
+- (void)testExample2
+{
+    XCTAssertEqual(@"1", @"2", @"test failure");
+}
+
 
 @end
